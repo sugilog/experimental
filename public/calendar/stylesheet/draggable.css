@@ -1,0 +1,11 @@
+.frame_box {
+  height: 300px;
+  background-color: #eeeeee;
+  border: 1px solid #999999;
+}
+.draggable {
+  width:  200px;
+  height: 200px;
+  border: 1px solid #999999;
+  background-color: #ffffff;
+}

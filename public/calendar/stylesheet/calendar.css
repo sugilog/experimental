@@ -1,0 +1,70 @@
+.calendar_field { position: relative; height: 100%; font-size: 10px; font-family: sans-serif; }
+#calendar_field_parent { overflow-y: scroll; height: 500px; border: 1px solid #cccccc; }
+#calendar_field_header { height: 100px; margin-bottom: 10px; border: 1px solid #cccccc; }
+#calendar_field_horizontal { position: absolute; left: 0%; right: 0%; top: 0%; height: 864px; }
+#calendar_field_time { position: absolute; left: 0%; right: 0%; top: 0%; height: 864px; }
+
+.calendar_vertical_day { height: 864px; }
+.calendar_vertical_header { height: 100%; text-align: center; }
+
+.calendar_horizontal_hour      { left: 9%; right: 0%; }
+.calendar_horizontal_half_hour { left: 9%; right: 0%; }
+.calendar_horizontal_time      { left: 0%; right: 91%; text-align: right; }
+
+.calendar_hour { position: absolute; left:  0%; right: 91%; border-right: 1px solid #cccccc; }
+.calendar_sun  { position: absolute; left:  9%; right: 78%; border-right: 1px solid #cccccc; }
+.calendar_mon  { position: absolute; left: 22%; right: 65%; border-right: 1px solid #cccccc; }
+.calendar_tue  { position: absolute; left: 35%; right: 52%; border-right: 1px solid #cccccc; }
+.calendar_wed  { position: absolute; left: 48%; right: 39%; border-right: 1px solid #cccccc; }
+.calendar_thu  { position: absolute; left: 61%; right: 26%; border-right: 1px solid #cccccc; }
+.calendar_fri  { position: absolute; left: 74%; right: 13%; border-right: 1px solid #cccccc; }
+.calendar_sat  { position: absolute; left: 87%; right:  0%; border-right: 0; }
+
+.hour0000 { position: absolute; top:  0.0000000%; bottom: 97.9166667%; border-top: 0; }
+.hour0030 { position: absolute; top:  2.0833333%; bottom: 95.8333333%; border-top: 1px dotted #cccccc; }
+.hour0060 { position: absolute; top:  4.1666667%; bottom: 93.7500000%; border-top: 1px solid #cccccc; }
+.hour0090 { position: absolute; top:  6.2500000%; bottom: 91.6666667%; border-top: 1px dotted #cccccc; }
+.hour0120 { position: absolute; top:  8.3333333%; bottom: 89.5833333%; border-top: 1px solid #cccccc; }
+.hour0150 { position: absolute; top: 10.4166667%; bottom: 87.5000000%; border-top: 1px dotted #cccccc; }
+.hour0180 { position: absolute; top: 12.5000000%; bottom: 85.4166667%; border-top: 1px solid #cccccc; }
+.hour0210 { position: absolute; top: 14.5833333%; bottom: 83.3333333%; border-top: 1px dotted #cccccc; }
+.hour0240 { position: absolute; top: 16.6666667%; bottom: 81.2500000%; border-top: 1px solid #cccccc; }
+.hour0270 { position: absolute; top: 18.7500000%; bottom: 79.1666667%; border-top: 1px dotted #cccccc; }
+.hour0300 { position: absolute; top: 20.8333333%; bottom: 77.0833333%; border-top: 1px solid #cccccc; }
+.hour0330 { position: absolute; top: 22.9166667%; bottom: 75.0000000%; border-top: 1px dotted #cccccc; }
+.hour0360 { position: absolute; top: 25.0000000%; bottom: 72.9166667%; border-top: 1px solid #cccccc; }
+.hour0390 { position: absolute; top: 27.0833333%; bottom: 70.8333333%; border-top: 1px dotted #cccccc; }
+.hour0420 { position: absolute; top: 29.1666667%; bottom: 68.7500000%; border-top: 1px solid #cccccc; }
+.hour0450 { position: absolute; top: 31.2500000%; bottom: 66.6666667%; border-top: 1px dotted #cccccc; }
+.hour0480 { position: absolute; top: 33.3333333%; bottom: 64.5833333%; border-top: 1px solid #cccccc; }
+.hour0510 { position: absolute; top: 35.4166667%; bottom: 62.5000000%; border-top: 1px dotted #cccccc; }
+.hour0540 { position: absolute; top: 37.5000000%; bottom: 60.4166667%; border-top: 1px solid #cccccc; }
+.hour0570 { position: absolute; top: 39.5833333%; bottom: 58.3333333%; border-top: 1px dotted #cccccc; }
+.hour0600 { position: absolute; top: 41.6666667%; bottom: 56.2500000%; border-top: 1px solid #cccccc; }
+.hour0630 { position: absolute; top: 43.7500000%; bottom: 54.1666667%; border-top: 1px dotted #cccccc; }
+.hour0660 { position: absolute; top: 45.8333333%; bottom: 52.0833333%; border-top: 1px solid #cccccc; }
+.hour0690 { position: absolute; top: 47.9166667%; bottom: 50.0000000%; border-top: 1px dotted #cccccc; }
+.hour0720 { position: absolute; top: 50.0000000%; bottom: 47.9166667%; border-top: 1px solid #cccccc; }
+.hour0750 { position: absolute; top: 52.0833333%; bottom: 45.8333333%; border-top: 1px dotted #cccccc; }
+.hour0780 { position: absolute; top: 54.1666667%; bottom: 43.7500000%; border-top: 1px solid #cccccc; }
+.hour0810 { position: absolute; top: 56.2500000%; bottom: 41.6666667%; border-top: 1px dotted #cccccc; }
+.hour0840 { position: absolute; top: 58.3333333%; bottom: 39.5833333%; border-top: 1px solid #cccccc; }
+.hour0870 { position: absolute; top: 60.4166667%; bottom: 37.5000000%; border-top: 1px dotted #cccccc; }
+.hour0900 { position: absolute; top: 62.5000000%; bottom: 35.4166667%; border-top: 1px solid #cccccc; }
+.hour0930 { position: absolute; top: 64.5833333%; bottom: 33.3333333%; border-top: 1px dotted #cccccc; }
+.hour0960 { position: absolute; top: 66.6666667%; bottom: 31.2500000%; border-top: 1px solid #cccccc; }
+.hour0990 { position: absolute; top: 68.7500000%; bottom: 29.1666667%; border-top: 1px dotted #cccccc; }
+.hour1020 { position: absolute; top: 70.8333333%; bottom: 27.0833333%; border-top: 1px solid #cccccc; }
+.hour1050 { position: absolute; top: 72.9166667%; bottom: 25.0000000%; border-top: 1px dotted #cccccc; }
+.hour1080 { position: absolute; top: 75.0000000%; bottom: 22.9166667%; border-top: 1px solid #cccccc; }
+.hour1110 { position: absolute; top: 77.0833333%; bottom: 20.8333333%; border-top: 1px dotted #cccccc; }
+.hour1140 { position: absolute; top: 79.1666667%; bottom: 18.7500000%; border-top: 1px solid #cccccc; }
+.hour1170 { position: absolute; top: 81.2500000%; bottom: 16.6666667%; border-top: 1px dotted #cccccc; }
+.hour1200 { position: absolute; top: 83.3333333%; bottom: 14.5833333%; border-top: 1px solid #cccccc; }
+.hour1230 { position: absolute; top: 85.4166667%; bottom: 12.5000000%; border-top: 1px dotted #cccccc; }
+.hour1260 { position: absolute; top: 87.5000000%; bottom: 10.4166667%; border-top: 1px solid #cccccc; }
+.hour1290 { position: absolute; top: 89.5833333%; bottom:  8.3333333%; border-top: 1px dotted #cccccc; }
+.hour1320 { position: absolute; top: 91.6666667%; bottom:  6.2500000%; border-top: 1px solid #cccccc; }
+.hour1350 { position: absolute; top: 93.7500000%; bottom:  4.1666667%; border-top: 1px dotted #cccccc; }
+.hour1380 { position: absolute; top: 95.8333333%; bottom:  2.0833333%; border-top: 1px solid #cccccc; }
+.hour1410 { position: absolute; top: 97.9166667%; bottom:  0.0000000%; border-top: 1px dotted #cccccc; }

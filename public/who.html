@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>who??</title>
+<script type="text/javascript">
+// https is not supported on code.jquery.com ??
+if (location.protocol === "https:") {
+  location.protocol = "http:";
+}
+</script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<!-- Size should be 144 x 144 pixels -->
+<link href="/images/who-apple-touch-icon_144x144-precomposed.png" rel="apple-touch-icon-precomposed" sizes="144x144" type="image/png" />
+
+<!-- For iPhone with high-resolution Retina display: -->
+<!-- Size should be 114 x 114 pixels -->
+<link href="/images/who-apple-touch-icon_114x114-precomposed.png" rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png" />
+
+<!-- For first- and second-generation iPad: -->
+<!-- Size should be 72 x 72 pixels -->
+<link href="/images/who-apple-touch-icon_72x72-precomposed.png" rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png" />
+
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<!-- Size should be 57 x 57 pixels -->
+<link href="/images/who-apple-touch-icon_precomposed.png" rel="apple-touch-icon-precomposed" type="image/png" />
+
+<!-- For all other devices -->
+<!-- Size should be 32 x 32 pixels -->
+<link href="/images/who-favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+</head>
+<body>
+<script type="text/javascript">
+var selector
+jQuery(function() {
+  var MemberSelect = function(members) {
+    this.members = members || [];
+    this.id      = Math.floor( Math.random() * 1000000 );
+    this.appendSpinner();
+    this.appendButton();
+  }
+  MemberSelect.buttonLabel = {
+    normal: "click to select",
+    error:  "too much members",
+    selecting: "now selecting"
+  }
+  MemberSelect.prototype.wrapper = function() {
+    return jQuery(["#", this.wrapperId()].join(""));
+  };
+  MemberSelect.prototype.find = function(selector) {
+    return this.wrapper().find(selector);
+  };
+  MemberSelect.prototype.wrapperId = function() {
+    return ["member", "select", this.id].join("_");
+  };
+  MemberSelect.prototype.memberId = function(_id) {
+    return ["member", _id].join("_");
+  };
+  MemberSelect.prototype.buttonId = function() {
+    return ["button", this.id].join("_");
+  };
+  MemberSelect.prototype.appendSpinner = function() {
+    var self = this;
+    var wrapper = jQuery("<div>").prop({id: this.wrapperId()}).css({textAlign: "center"});
+    var spinner = jQuery("<ul>").prop({id: "spinner"}).addClass("ui-widget ui-helper-clearfix").css({padding: 10});
+    jQuery.each(this.members, function(idx, member) {
+      jQuery("<li>").text(member).prop({id: self.memberId(idx)}).addClass("ui-state-default ui-corner-all").css({listStyleType: "none", margin: 20, padding: 5}).appendTo(spinner);
+    });
+    jQuery("body").append(wrapper.append(spinner));
+  };
+  MemberSelect.prototype.appendButton = function() {
+    var self = this;
+    this.wrapper().append(
+      jQuery("<input>")
+        .prop({type: "button", id: this.buttonId()})
+        .addClass("ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only")
+        .val(self.constructor.buttonLabel.normal)
+        .on("click", function() {
+          self.select();
+        })
+    );
+  };
+  MemberSelect.prototype.select = function() {
+    this.find(["#", this.buttonId()].join("")).removeClass("ui-state-error").val(this.constructor.buttonLabel.selecting);
+    this.find("li").removeClass("ui-state-highlight");
+
+    var self = this, l;
+
+    if (self.members.length > 100) {
+      this.find(["#", this.buttonId()].join("")).addClass("ui-state-error").val(self.constructor.buttonLabel.error);
+      throw new Error(self.constructor.buttonLabel.error);
+    }
+    else if (self.members.length > 50) {
+      l = 50;
+    }
+    else {
+      l = 30;
+    }
+
+    var index = function() {
+      var b = Math.floor(Math.random() * Math.pow(10, String(self.members.length).length));
+      var i = b % self.members.length;
+      // console.log("select: " + b + " -> " + i);
+      return i;
+    };
+
+    var selected, cb = function(delay) {
+      return function() {
+        jQuery(this).find(["#", self.memberId(index())].join("")).effect("highlight", "", delay, function() {
+          selected = jQuery(this).prop("id");
+          self.wrapper().dequeue();
+        });
+      };
+    };
+
+    while(l--) {
+      if (l < 10) {
+        this.wrapper().queue(cb(500));
+      }
+      else {
+        this.wrapper().queue(cb(200));
+      }
+    }
+    this.wrapper().queue(function() {
+      self.find(["#", self.buttonId()].join("")).val(self.constructor.buttonLabel.normal);
+      self.wrapper().dequeue();
+    });
+
+    this.wrapper().queue(function() {
+      alert(
+        [
+          "selected:",
+          jQuery(this).find(["#", selected].join("")).addClass("ui-state-highlight").text()
+        ].join(" ")
+      );
+    });
+
+    this.wrapper().dequeue();
+  };
+
+  var members = location.hash.replace("#", "").split(",");
+  selector = new MemberSelect(members);
+});
+</script>
+</body>
+</html>
