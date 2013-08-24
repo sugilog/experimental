@@ -2,4 +2,55 @@
   <h1>Markdown</h1>
 </div>
 
-<%= link_to t('.dummy', default: t("helpers.links.new")), '', class: 'btn btn-primary' %>
+<%= form_tag({action: :print}, {method: :post}) do %>
+  <%= submit_tag "Printable mode", {class: 'btn btn-block btn-primary to_print'} %>
+  <br />
+  <br />
+  <textarea name="markdown" id="markdown" class="span9">
+  </textarea>
+<% end %>
+
+<br />
+
+<div id="markdown_preview" class="span9">
+</div>
+
+<script type="text/javascript">
+  // jquery.observe_field
+  // https://github.com/splendeo/jquery.observe_field
+  jQuery.fn.observeField = function(frequency, callback) {
+    frequency = frequency * 1000; // translate to milliseconds
+    return this.each(function(){
+      var _this = jQuery(this);
+      var prev = _this.val();
+      var check = function() {
+        var val = _this.val();
+        if(prev != val){
+          prev = val;
+          _this.map(callback); // invokes the callback on $this
+        }
+      };
+      var reset = function() {
+        if(ti){
+          clearInterval(ti);
+          ti = setInterval(check, frequency);
+        }
+      };
+      check();
+      var ti = setInterval(check, frequency); // invoke check periodically
+      // reset counter after user interaction
+      _this.bind('keyup click mousemove', reset); //mousemove is for selects
+    });
+  };
+
+  jQuery("#markdown").observeField(1, function() {
+    jQuery.post(
+      "<%= url_for action: :preview %>",
+      {markdown: jQuery(this).val()},
+      function(data) {
+        jQuery("#markdown_preview").html(data.html);
+      },
+      "json"
+    )
+  });
+</script>

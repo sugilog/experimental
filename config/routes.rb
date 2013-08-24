@@ -7,6 +7,10 @@ Experimental::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'markdowns#index'
 
+  get ':controller(/:action(/:id))'
+  post ':controller(/:action(/:id))'
+  patch ':controller(/:action(/:id))'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
