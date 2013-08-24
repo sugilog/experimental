@@ -42,6 +42,8 @@ gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootst
 
 gem "bcrypt-ruby", "~> 3.0.1"
 
+gem "redcarpet", "~> 3.0.0"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
