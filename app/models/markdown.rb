@@ -1,5 +1,3 @@
-require 'redcarpet'
-
 class Markdown
   class Custom < Redcarpet::Render::HTML
     include ActionView::Helpers::UrlHelper
@@ -12,7 +10,7 @@ class Markdown
   attr_reader :renderer
 
   def initialize(option = {})
-    option.reverse_merge! autolink: true, space_after_headers: true, tables: true
+    option.reverse_merge! autolink: true, space_after_headers: true, tables: true, fenced_code_blocks: true
     @renderer = Redcarpet::Markdown.new Custom, option
   end
 
