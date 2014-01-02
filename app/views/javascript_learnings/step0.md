@@ -27,7 +27,7 @@ htmlファイルをサーバーに設置しておくだけにしているよう�
 
 動的な操作を実現する
 ----------------------------------------------------------
-例えば、Googleカレンダーのようなインターフェース。[サンプル](/calendar/sample.html)
+例えば、Googleカレンダーのようなインターフェース。[サンプル](/calendar/sample.html#no_turbolink)
 
 
 ウェブマスターのためのツール

@@ -3,7 +3,16 @@ class Markdown
     include ActionView::Helpers::UrlHelper
 
     def link(link, title, content)
-      link_to content, link, :title => title, :"data-no-turbolink" => true
+      no_turbolink_pattern = /#no_turbolink$/
+
+      options = { title: title }
+
+      if link =~ no_turbolink_pattern
+        options.update :"data-no-turbolink" => true
+        link = link.sub no_turbolink_pattern, ""
+      end
+
+      link_to content, link, options
     end
   end
 
