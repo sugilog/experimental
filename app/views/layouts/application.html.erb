@@ -79,8 +79,13 @@
         <p>
           &copy;
           sugilog
-          <script type="text/javascript">document.write( new Date().getFullYear() );</script>
+          <span class="year"></span>
         </p>
+        <script type="text/javascript">
+          jQuery("footer span.year").text(
+            new Date().getFullYear()
+          );
+        </script>
       </footer>
 
     </div> <!-- /container -->
