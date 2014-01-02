@@ -46,12 +46,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Experimental</a>
+          <a class="brand" href="/">Experimental</a>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Link1", "/path1"  %></li>
-              <li><%= link_to "Link2", "/path2"  %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "Markdown", controller: :markdowns  %></li>
+              <li><%= link_to "JavaScript Learning", controller: :javascript_learnings %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -69,16 +68,19 @@
               <h3>Sidebar</h3>
               <ul class="nav nav-list">
                 <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>
+                <li><%= link_to "Markdown", controller: :markdowns  %></li>
+                <li><%= link_to "JavaScript Learning", controller: :javascript_learnings %></li>
               </ul>
             </div><!--/.well -->
           </div><!--/span-->
         </div><!--/row-->
 
       <footer>
-        <p>&copy; sugilog 2013 -</p>
+        <p>
+          &copy;
+          sugilog
+          <script type="text/javascript">document.write( new Date().getFullYear() );</script>
+        </p>
       </footer>
 
     </div> <!-- /container -->
