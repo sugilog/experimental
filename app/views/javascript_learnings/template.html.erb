@@ -3,6 +3,14 @@
 
 <div id="markdown_preview" class="span9">
   <%== @content %>
+
+<% unless printable_mode? %>
+  <hr />
+  <%= link_to "original markdown", {action: action_name, format: :md}, {class: 'btn btn-primary'} %>
+  <%= link_to "printable", {action: action_name, printable: 1}, {class: 'btn btn-primary'} %>
+  <br />
+  <br />
+<% end %>
 </div>
 
 <script type="text/javascript">

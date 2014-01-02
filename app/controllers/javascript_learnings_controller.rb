@@ -1,17 +1,35 @@
 class JavascriptLearningsController < ApplicationController
   before_filter :set_markdown
+  layout :switch_layout
 
   private
+
+  def printable_mode?
+    params[:printable]
+  end
+  helper_method :printable_mode?
 
   def set_markdown
     @markdown = Markdown.new
   end
 
+  def switch_layout
+    printable_mode? ? "printable" : "application"
+  end
+
   def action_missing(_action_name, *args)
     @markdown_template = find_markdown _action_name
-    @content = compile_markdown
 
-    render :template
+    respond_to do |format|
+      format.md do
+        render text: read_markdown
+      end
+
+      format.all do
+        @content = compile_markdown
+        render :template
+      end
+    end
   end
 
   # raise ActionView::MissingTemplate
@@ -28,7 +46,10 @@ class JavascriptLearningsController < ApplicationController
   end
 
   def compile_markdown
-    content = @markdown_template.render view_context, false
-    @markdown.render content
+    @markdown.render read_markdown
+  end
+
+  def read_markdown
+    @markdown_template.render view_context, false
   end
 end
