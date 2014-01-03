@@ -6,8 +6,13 @@
 
 <% unless printable_mode? %>
   <hr />
-  <%= link_to "original markdown", {action: action_name, format: :md}, {class: 'btn btn-default'} %>
-  <%= link_to "print friendly", {action: action_name, printable: 1}, {class: 'btn btn-default'} %>
+  <div class="btn-group btn-group-justified">
+<%   unless action_name.to_s == "index" %>
+    <%= link_to "index", {action: :index}, {class: "btn btn-default"} %>
+<%   end %>
+    <%= link_to "original markdown", {action: action_name, format: :md}, {class: 'btn btn-default'} %>
+    <%= link_to "print friendly", {action: action_name, printable: 1}, {class: 'btn btn-default'} %>
+  </div>
 <% end %>
 </div>
 
