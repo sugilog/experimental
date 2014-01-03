@@ -12,5 +12,49 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
+
+jQuery( function() {
+  jQuery( document )
+    .off( "click.toc_link", "div.nav-toc a" )
+    .on( "click.toc_link", "div.nav-toc a", function() {
+      var fragment = jQuery( this ).attr( "href" );
+
+      jQuery( "html, body" ).animate( {
+        scrollTop: jQuery( fragment ).offset().top
+      }, 1000 );
+
+      return false;
+    } );
+
+  jQuery( "div.nav-toc ul" ).empty();
+
+  jQuery( "div.container" )
+    .find( "h1, h2" )
+    .each( function( idx ) {
+      var title = jQuery( this ).text(),
+          name  = jQuery( this ).prop("id") || title.replace(/\s|\./g, "_").replace(/[^a-zA-Z0-9_\-]/g, ""),
+          depth = Number( this.tagName.match(/h(\d+)/i)[1] || 1 ) - 1;
+
+      if ( name === "" ) {
+        name = "toc_" + idx;
+      }
+
+      jQuery( this ).prop( { id: name } );
+
+      jQuery( "<li>" )
+        .append(
+          jQuery( "<a>" )
+            .css( { marginLeft: ( 20 * depth ) + "px" } )
+            .prop( { href: "#" + name } )
+            .text( title )
+        )
+        .appendTo(
+          jQuery( "div.nav-toc ul" )
+        );
+    } )
+
+  jQuery('body').scrollspy({ target: '.nav-toc' })
+} );
