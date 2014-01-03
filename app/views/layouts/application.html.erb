@@ -70,10 +70,8 @@
           <%= yield %>
         </div>
         <div class="col-md-3">
-          <div class="affix" role="complementary">
+          <div class="affix nav-toc" role="complementary">
             <ul class="nav nav-pills nav-stacked">
-              <li><%= link_to "Markdown", controller: :markdowns  %></li>
-              <li><%= link_to "JavaScript Learning", controller: :javascript_learnings %></li>
             </ul>
           </div>
         </div>
@@ -97,5 +95,35 @@
     </div> <!-- /container -->
 
     <%= render partial: "layouts/google_tag_manager" %>
+
+    <script type="text/javascript">
+      jQuery( function() {
+        jQuery( "div.container" )
+          .find( "h1, h2" )
+          .each( function( idx ) {
+            var title = jQuery( this ).text(),
+                name  = jQuery( this ).prop("id") || title.replace(/[^a-zA-Z0-9_\-\.]/g, ""),
+                depth = Number( this.tagName.match(/h(\d+)/i)[1] || 1 ) - 1;
+
+            if ( name === "" ) {
+              name = "toc_" + idx;
+            }
+
+            jQuery( this ).prop( { id: name } );
+
+            jQuery( "<li>" )
+              .append(
+                jQuery( "<a>" )
+                  .css( { marginLeft: ( 20 * depth ) + "px" } )
+                  .prop( { href: "#" + name } ).text( title )
+              )
+              .appendTo(
+                jQuery( "div.nav-toc ul" )
+              );
+          } )
+
+        jQuery('body').scrollspy({ target: '.nav-toc' })
+      } );
+    </script>
   </body>
 </html>
