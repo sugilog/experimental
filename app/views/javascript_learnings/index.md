@@ -12,7 +12,7 @@ Target
   - 学習する際に、HTMLの文書を使用します。
 
 
-[Step 0](/javascript_learnings/step0) <small>JavaScriptがウェブアプリケーションで行っていることを知る。</small>
+[JS.Step0](/javascript_learnings/step0) <small>JavaScriptがウェブアプリケーションで行っていることを知る。</small>
 ----------------------------------------------------------
 - 静的な使い方
 - フォームをインタラクティブにする
@@ -21,7 +21,7 @@ Target
 - ウェブアプリケーション以外では、、、
 
 
-[Step 1](/javascript_learnings/step1) <small>JavaScriptでのプログラミングに触る。</small>
+[JS.Step1](/javascript_learnings/step1) <small>JavaScriptでのプログラミングに触る。</small>
 ----------------------------------------------------------
 - JavaScriptに触れてみる
 - HTML (DOM) を操作してみる
@@ -29,15 +29,15 @@ Target
 
 
 
-[Step 2](/javascript_learnings/step2)
+[JS.Step2](/javascript_learnings/step2)
 ----------------------------------------------------------
 
 
-[Step 3](/javascript_learnings/step3)
+[JS.Step3](/javascript_learnings/step3)
 ----------------------------------------------------------
 
 
-[Step 4](/javascript_learnings/step4)
+[JS.Step4](/javascript_learnings/step4)
 ----------------------------------------------------------
 
 
