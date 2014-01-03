@@ -1,15 +1,13 @@
 <%= stylesheet_link_tag "/plugins/highlight/styles/github.css", :media => "all" %>
 <%= javascript_include_tag "/plugins/highlight/highlight.pack.js" %>
 
-<div id="markdown_preview" class="span9">
+<div id="markdown_preview">
   <%== @content %>
 
 <% unless printable_mode? %>
   <hr />
-  <%= link_to "original markdown", {action: action_name, format: :md}, {class: 'btn btn-primary'} %>
-  <%= link_to "printable", {action: action_name, printable: 1}, {class: 'btn btn-primary'} %>
-  <br />
-  <br />
+  <%= link_to "original markdown", {action: action_name, format: :md}, {class: 'btn btn-default'} %>
+  <%= link_to "printable", {action: action_name, printable: 1}, {class: 'btn btn-default'} %>
 <% end %>
 </div>
 

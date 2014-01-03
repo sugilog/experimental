@@ -38,8 +38,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
-
 gem "bcrypt-ruby", "~> 3.0.1"
 
 gem "redcarpet", "~> 3.0.0"
