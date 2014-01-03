@@ -16,45 +16,86 @@
 //= require turbolinks
 //= require_tree .
 
-jQuery( function() {
-  jQuery( document )
-    .off( "click.toc_link", "div.nav-toc a" )
-    .on( "click.toc_link", "div.nav-toc a", function() {
-      var fragment = jQuery( this ).attr( "href" );
+var tocLinks = ( function() {
+  var detectName, detectDepth;
 
-      jQuery( "html, body" ).animate( {
-        scrollTop: jQuery( fragment ).offset().top
-      }, 1000 );
+  detectFragment = function( link, index ) {
+    var name,
+        title = jQuery( link ).text();
 
-      return false;
-    } );
+    index = index || 0;
+    name = jQuery( link ).prop( "id" ) || title.replace( /\s|\./g, "_" ).replace( /[^a-zA-Z0-9_\-]/g, "" );
 
-  jQuery( "div.nav-toc ul" ).empty();
+    if ( name === "" ) {
+      name = "toc_" + index;
+    }
 
-  jQuery( "div.container" )
-    .find( "h1, h2" )
-    .each( function( idx ) {
-      var title = jQuery( this ).text(),
-          name  = jQuery( this ).prop("id") || title.replace(/\s|\./g, "_").replace(/[^a-zA-Z0-9_\-]/g, ""),
-          depth = Number( this.tagName.match(/h(\d+)/i)[1] || 1 ) - 1;
+    return name;
+  };
 
-      if ( name === "" ) {
-        name = "toc_" + idx;
-      }
+  detectDepth = function( link, support ) {
+    support = typeof support === "undefined" ? true : !!support;
 
-      jQuery( this ).prop( { id: name } );
+    if ( support ) {
+      var depth;
+      depth = link.tagName.match( /h(\d+)/i );
+      depth = Number( depth ? depth[ 1 ] : 1 ) - 1;
 
-      jQuery( "<li>" )
-        .append(
-          jQuery( "<a>" )
-            .css( { marginLeft: ( 20 * depth ) + "px" } )
-            .prop( { href: "#" + name } )
-            .text( title )
-        )
-        .appendTo(
-          jQuery( "div.nav-toc ul" )
-        );
-    } )
+      return { marginLeft: ( 20 * depth ) + "px" };
+    }
+    else {
+      return {};
+    }
+  };
 
-  jQuery('body').scrollspy({ target: '.nav-toc' })
-} );
+  return function( options ) {
+    options = jQuery.extend( {}, options );
+
+    var container = this,
+        toc       = options.toc || "div.nav-toc",
+        tocLink   = [ toc, "a" ].join( " " ),
+        tags      = options.tags || [ "h1", "h2" ],
+        supportDepth   = options.supportDepth,
+        scrollDuration = options.scrollDuration || 300;
+
+    jQuery( document )
+      .off( "click.toc_link", tocLink )
+      .on( "click.toc_link", tocLink, function() {
+        var fragment;
+        fragment = jQuery( this ).prop( "href" ).match( /(#.+)/ );
+
+        if ( fragment ) {
+          fragment = fragment[ 1 ];
+
+          jQuery( "html, body" ).animate( {
+            scrollTop: jQuery( fragment ).offset().top
+          }, scrollDuration );
+
+          return false;
+        }
+      } );
+
+    jQuery( [ toc, "ul" ].join( " " ) ).empty();
+
+    jQuery( container )
+      .find( tags.join( ", " ) )
+      .each( function( idx ) {
+        var fragment = detectFragment( this, idx ),
+            title    = jQuery( this ).text(),
+            tocList  = jQuery( [ toc, "ul" ].join( " " ) );
+
+        jQuery( this ).prop( { id: fragment } );
+
+        jQuery( "<li>" )
+          .append(
+            jQuery( "<a>" )
+              .css( detectDepth( this, supportDepth ) )
+              .prop( { href: [ "#", fragment ].join( "" ) } )
+              .text( title )
+          )
+          .appendTo( tocList );
+      } )
+  };
+} )();
+
+jQuery.fn.tocLinks = tocLinks;

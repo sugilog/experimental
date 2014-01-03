@@ -95,5 +95,12 @@
     </div> <!-- /container -->
 
     <%= render partial: "layouts/google_tag_manager" %>
+
+    <script type="text/javascript">
+      jQuery( function() {
+        jQuery( "div.container" ).tocLinks();
+        jQuery('body').scrollspy({ target: '.nav-toc' })
+      } );
+    </script>
   </body>
 </html>
