@@ -20,7 +20,6 @@ Target
 - 学習する際に、HTMLの文書を使用するため、HTML、CSSを簡単にでも触れている必要があります。
 
 
-
 [JS.Step0](/javascript_learnings/step0) <small>JavaScriptがウェブアプリケーションで行っていることを知る。</small>
 ----------------------------------------------------------
 - 静的な使い方
@@ -39,6 +38,14 @@ Target
 - Webリファレンスを見る
 - Webサービスを利用してで学習する
 
+
+### メモ
+- Jqueryとは何か
+- Jqueryはフォーム操作から使い始める
+- 誤字
+- Chromeをなぜ使うか
+- リッチ化から始める
+- 後半はrailsを使う
 
 
 [JS.Step2](/javascript_learnings/step2)
