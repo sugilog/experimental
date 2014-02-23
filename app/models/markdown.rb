@@ -1,61 +1,30 @@
 class Markdown
-  class Custom < Redcarpet::Render::HTML
-    include ActionView::Helpers::UrlHelper
+  NO_TURBOLINK_PATTERN = /#no_turbolink$/
 
-    def link(link, title, content)
-      no_turbolink_pattern = /#no_turbolink$/
+  attr_reader :parser
 
-      options = { title: title }
-
-      if link =~ no_turbolink_pattern
-        options.update :"data-no-turbolink" => true
-        link = link.sub no_turbolink_pattern, ""
-      end
-
-      link_to content, link, options
-    end
-  end
-
-  attr_reader :renderer
-
-  DEFAULT_RENDERER_OPTIONS = {
-    filter_html:          true,
-    safe_links_only:      true,
-    with_toc_data:        true,
-    hard_wrap:            true,
-    prettify:             true,
-    link_attributes:      true,
-    no_images:            false,
-    no_links:             false,
-    no_styles:            false,
-    xhtml:                false,
-  }
-
-  DEFAULT_EXTENSIONS = {
-    tables:                       true,
-    fenced_code_blocks:           true,
-    autolink:                     true,
-    strikethrough:                true,
-    lax_spacing:                  true,
-    underline:                    true,
-    highlight:                    true,
-    quote:                        true,
-    superscript:                  true,
-    no_intra_emphasis:            false,
-    disable_indented_code_blocks: false,
-    space_after_headers:          false,
-    superscript:                  false,
-  }
+  DEFAULT_PARSER = 'GFM'
 
   def initialize(options = {})
-    renderer_options = DEFAULT_RENDERER_OPTIONS.merge( options[:renderer] || {} )
-    extensions =       DEFAULT_EXTENSIONS.merge( options[:extension] || {} )
-
-    renderer = Custom.new renderer_options
-    @renderer = Redcarpet::Markdown.new renderer, extensions
+    @parser = options[:input] || DEFAULT_PARSER
   end
 
   def render(text)
-    @renderer.render text
+    Kramdown::Document.new(text, input: @parser).to_html
   end
 end
+
+class Kramdown::Converter::Html
+  def convert_a_with_no_turbolink(element, indent)
+    _attr = element.attr
+
+    if Markdown::NO_TURBOLINK_PATTERN =~ element.attr['href']
+      element.attr['data-no-turbolink'] = true
+      element.attr['href'].sub! Markdown::NO_TURBOLINK_PATTERN, ''
+    end
+
+    convert_a_without_no_turbolink element, indent
+  end
+  alias_method_chain :convert_a, :no_turbolink
+end
+
