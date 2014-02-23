@@ -20,17 +20,7 @@ var tocLinks = ( function() {
   var detectName, detectDepth;
 
   detectFragment = function( link, index ) {
-    var name,
-        title = jQuery( link ).text();
-
-    index = index || 0;
-    name = jQuery( link ).prop( "id" ) || title.replace( /\s|\./g, "_" ).replace( /[^a-zA-Z0-9_\-]/g, "" );
-
-    if ( name === "" ) {
-      name = "toc_" + index;
-    }
-
-    return name;
+    return jQuery( link ).prop( "id" );
   };
 
   detectDepth = function( link, support ) {
