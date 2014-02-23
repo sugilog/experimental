@@ -41,7 +41,8 @@ end
 
 gem "bcrypt-ruby", "~> 3.0.1"
 
-gem "redcarpet", "~> 3.0.0"
+# gem "redcarpet", "~> 3.0.0"
+gem "kramdown", "~> 1.3.2"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
