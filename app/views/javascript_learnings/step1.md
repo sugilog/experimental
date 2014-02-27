@@ -29,9 +29,9 @@ JavaScriptに触れてみる
       <h2>socail</h2>
       <dl>
         <dt>github</dt>
-        <dd><a href="https://github.com/sugilog"><img src="http://localhost:3333/javascript_learnings_resources/step1/images/github.png" /></a></dd>
+        <dd><a href="https://github.com/sugilog"><img src="http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/images/github.png" /></a></dd>
         <dt>facebook</dt>
-        <dd><a href="https://www.facebook.com/sugilog"><img src="http://localhost:3333/javascript_learnings_resources/step1/images/facebook.png" /></a></dd>
+        <dd><a href="https://www.facebook.com/sugilog"><img src="http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/images/facebook.png" /></a></dd>
       </dl>
     </section>
 
@@ -50,7 +50,7 @@ JavaScriptに触れてみる
 
 ```html
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="http://localhost:3333/javascript_learnings_resources/step1/slide.js"></script>
+<script type="text/javascript" src="http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/slide.js"></script>
 ```
 
 読み込んだ２つ目のファイル（slide.js）の内容を実行するためのコードを追加します。（headの閉じタグの前にscriptタグを追加します。）
@@ -69,7 +69,7 @@ JavaScriptに触れてみる
 HTMLだけでは、動きの（あまり）ない文書、でしたが、JavaScriptを組み込むことで、動きが出てきました。
 
 
-[サンプル](http://localhost:3333/javascript_learnings_resources/step1/slide.html#no_turbolink)
+[サンプル](http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/slide.html#no_turbolink)
 
 
 
@@ -122,7 +122,7 @@ jQuery( "#myname" ).css( { color: "#d52e89" } );
 ピンクな名前になりました？
 
 
-[サンプル](http://localhost:3333/javascript_learnings_resources/step1/myname.html#no_turbolink)
+[サンプル](http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/myname.html#no_turbolink)
 
 
 
@@ -187,7 +187,7 @@ Consoleペインにあなたの名前が表示されましたか？
 （ブラウザによっては、`console.log`が何者かわからずに、エラーする場合もあります。）
 
 
-[サンプル](http://localhost:3333/javascript_learnings_resources/step1/myname_with_console.html#no_turbolink)
+[サンプル](http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/myname_with_console.html#no_turbolink)
 
 
 Consoleにエラーを表示させてみる
@@ -210,7 +210,7 @@ Consoleペインでは、あなたのJavaScriptがバグを含んでいた場合
 実行時に想定していないエラーが確認できるので、Consoleペインを見ることは、JavaScript開発にとってとても重要です。
 
 
-[サンプル](http://localhost:3333/javascript_learnings_resources/step1/myname_with_error.html#no_turbolink)
+[サンプル](http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/myname_with_error.html#no_turbolink)
 
 
 Webリファレンスを見る
