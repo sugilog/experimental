@@ -39,27 +39,32 @@ Target
 - Webリファレンスを見る
 - Webサービスを利用してで学習する
 
-[JS.Step2](/javascript_learnings/step2)
+[JS.Step2](/javascript_learnings/step2) <small>JavaScriptの構文を知る。</small>
 ----------------------------------------------------------
 
 
-[JS.Step3](/javascript_learnings/step3)
+
+[JS.Step3](/javascript_learnings/step3) <small>JavaScriptのObject</small>
 ----------------------------------------------------------
 
 
-[JS.Step4](/javascript_learnings/step4)
+
+[JS.Step4](/javascript_learnings/step4) <small>イベントドリブン！</small>
 ----------------------------------------------------------
 
 
-* * * *
+[JS.Step5](/javascript_learnings/step5) <small>あらためてjQuery</small>
+----------------------------------------------------------
 
-メモ
-------------------------------------------------------------
-- Jqueryとは何か
-- Jqueryはフォーム操作から使い始める
-- 誤字
-- Chromeをなぜ使うか
-- リッチ化から始める
-- 後半はrailsを使う
+
+
+[JS.Step6](/javascript_learnings/step6) <small>（実践）Railsのフォームと組み合わせてみる。</small>
+----------------------------------------------------------
+
+
+
+[JS.Step7](/javascript_learnings/step7) <small>（実践）RailsとAjaxなアプリケーション。</small>
+----------------------------------------------------------
+
 
 
