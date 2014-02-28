@@ -29,9 +29,17 @@ JavaScriptに触れてみる
       <h2>socail</h2>
       <dl>
         <dt>github</dt>
-        <dd><a href="https://github.com/sugilog"><img src="http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/images/github.png" /></a></dd>
+        <dd>
+          <a href="https://github.com/sugilog">
+            <img src="http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/images/github.png" />
+          </a>
+        </dd>
         <dt>facebook</dt>
-        <dd><a href="https://www.facebook.com/sugilog"><img src="http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/images/facebook.png" /></a></dd>
+        <dd>
+          <a href="https://www.facebook.com/sugilog">
+            <img src="http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/images/facebook.png" />
+          </a>
+        </dd>
       </dl>
     </section>
 
