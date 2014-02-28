@@ -124,7 +124,7 @@ jQuery( "#myname" ).css( { color: "#d52e89" } );
 ピンクな名前になりました？
 
 
-[サンプル](http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/myname.html#no_turbolink)
+[サンプル](/javascript_learnings_resources/step1/myname.html#no_turbolink)
 
 
 
@@ -189,7 +189,7 @@ Consoleペインにあなたの名前が表示されましたか？
 （ブラウザによっては、`console.log`が何者かわからずに、エラーする場合もあります。）
 
 
-[サンプル](http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/myname_with_console.html#no_turbolink)
+[サンプル](/javascript_learnings_resources/step1/myname_with_console.html#no_turbolink)
 
 
 Consoleにエラーを表示させてみる
@@ -212,7 +212,7 @@ Consoleペインでは、あなたのJavaScriptがバグを含んでいた場合
 実行時に想定していないエラーが確認できるので、Consoleペインを見ることは、JavaScript開発にとってとても重要です。
 
 
-[サンプル](http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/myname_with_error.html#no_turbolink)
+[サンプル](/javascript_learnings_resources/step1/myname_with_error.html#no_turbolink)
 
 
 Webリファレンスを見る
