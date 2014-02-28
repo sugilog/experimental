@@ -46,6 +46,8 @@ JavaScriptに触れてみる
 </html>
 ```
 
+[サンプル](/javascript_learnings_resources/step1/original.html#no_turbolink)
+
 このファイルに、JavaScriptを2つ読み込みます。（headの閉じタグの前にscriptタグを追加します。）
 
 ```html
@@ -69,7 +71,7 @@ JavaScriptに触れてみる
 HTMLだけでは、動きの（あまり）ない文書、でしたが、JavaScriptを組み込むことで、動きが出てきました。
 
 
-[サンプル](http://sugilog-experimental.herokuapp.com/javascript_learnings_resources/step1/slide.html#no_turbolink)
+[サンプル](/javascript_learnings_resources/step1/slide.html#no_turbolink)
 
 
 
