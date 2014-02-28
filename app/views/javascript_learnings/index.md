@@ -36,8 +36,11 @@ Target
 - JavaScriptに触れてみる
 - HTML (DOM) を操作してみる
 - デバッガーに触れてみる
+- Consoleにログを表示させる
+- Consoleにエラーを表示させてみる
 - Webリファレンスを見る
 - Webサービスを利用してで学習する
+- 書籍で学ぶ
 
 [JS.Step2](/javascript_learnings/step2) <small>JavaScriptの構文を知る。</small>
 ----------------------------------------------------------
