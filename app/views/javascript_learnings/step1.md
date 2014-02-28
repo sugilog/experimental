@@ -225,6 +225,9 @@ Webリファレンスを見る
 - [jQuery API Documentation](http://api.jquery.com/)
   - jQueryのAPIドキュメントです。
   - 日本語サイトもありますが、基本はオフィシャルサイトを利用することですので英語版を。
+- [Codeacademy JavaScript](http://www.codecademy.com/tracks/javascript)
+  - CodeacademyのJavaScript。書きながら学べます。
+  - [jQuery](http://www.codecademy.com/tracks/jquery)もあります。
 
 
 Webサービスを利用してで学習する
