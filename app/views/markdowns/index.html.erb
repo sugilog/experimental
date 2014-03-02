@@ -2,12 +2,12 @@
   <h1>Markdown</h1>
 </div>
 
-<%= form_tag({action: :print}, {method: :post, class: "hidden-print"}) do %>
-  <%= submit_tag "Printable mode", {class: 'btn btn-block btn-primary to_print'} %>
-  <br />
-  <br />
+<div class="hidden-print">
+  <small>
+    Put your markdown text; then markdown to be converted!
+  </small>
   <textarea name="markdown" id="markdown" class="form-control col-md-9"></textarea>
-<% end %>
+<div class="page-header hidden-print">
 
 <br />
 
