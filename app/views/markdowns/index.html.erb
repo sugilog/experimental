@@ -2,7 +2,7 @@
   <h1>Markdown</h1>
 </div>
 
-<%= form_tag({action: :print}, {method: :post}) do %>
+<%= form_tag({action: :print}, {method: :post, class: "hidden-print"}) do %>
   <%= submit_tag "Printable mode", {class: 'btn btn-block btn-primary to_print'} %>
   <br />
   <br />
