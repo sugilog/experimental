@@ -1,20 +1,10 @@
 class JavascriptLearningsController < ApplicationController
   before_filter :set_markdown
-  layout :switch_layout
 
   private
 
-  def printable_mode?
-    params[:printable]
-  end
-  helper_method :printable_mode?
-
   def set_markdown
     @markdown = Markdown.new
-  end
-
-  def switch_layout
-    printable_mode? ? "printable" : "application"
   end
 
   def action_missing(_action_name, *args)
