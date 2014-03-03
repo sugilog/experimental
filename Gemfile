@@ -8,6 +8,7 @@ group :production do
 end
 group :development, :test do
   gem 'sqlite3'
+  gem "mocha", "~> 1.0.0"
 end
 
 # Use SCSS for stylesheets

@@ -2,6 +2,7 @@ JavaScript Learning <small>and it's know how</small>
 ==========================================================
 
 Stepを進むごとにJavaScriptを利用したウェブアプリケーション構築のための理解を促します。
+ページが出来ていない場所はアプリケーションエラーになりますが、無視してください。
 
 Target
 ----------------------------------------------------------
@@ -42,14 +43,19 @@ Target
 - Webサービスを利用してで学習する
 - 書籍で学ぶ
 
+
 [JS.Step2](/javascript_learnings/step2) <small>JavaScriptの構文を知る。</small>
 ----------------------------------------------------------
 
 
 
-[JS.Step3](/javascript_learnings/step3) <small>JavaScriptのObject</small>
+[JS.Step3](/javascript_learnings/step3) <small>JavaScriptの値</small>
 ----------------------------------------------------------
-
+- プリミティブとオブジェクト
+- オブジェクトのイメージ
+- オブジェクトを定義する
+- プロトタイプとプロトタイプチェーン
+- 取り扱い注意
 
 
 [JS.Step4](/javascript_learnings/step4) <small>イベントドリブン！</small>
