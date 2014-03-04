@@ -150,7 +150,7 @@ Constructorをつくることでクラス的な振る舞いをさせることも
 var Notebook = function() {
   var _lines = [];
 
-  this.add = function( line ) {
+  this.set = function( line ) {
     _lines.push( line );
   };
 
@@ -164,7 +164,7 @@ Notebook.prototype.write = function( content ) {
       i = 0;
 
   for ( ; i < lines.length; i++ ) {
-    this.add( lines[ i ] );
+    this.set( lines[ i ] );
   }
 };
 
@@ -224,10 +224,12 @@ JavaScriptでアプリケーションを作っていく場合、プロトタイ�
 例えば以下の実装では、継承後のオブジェクトのプロトタイプで、`toText`という関数の実装を変更し、他のプロトタイプはそのまま利用します。
 
 ```js
-var Notebook = function() {
+var Notebook, NumberedNotebook;
+
+Notebook = function() {
   var _lines = [];
 
-  this.add = function( line ) {
+  this.set = function( line ) {
     _lines.push( line );
   };
 
@@ -235,13 +237,14 @@ var Notebook = function() {
     return _lines;
   };
 };
+
 Notebook.prototype = {
   write: function( content ) {
     var lines = content.split( /\r\n|\r|\n/ ),
         i = 0;
 
     for ( ; i < lines.length; i++ ) {
-      this.add( lines[ i ] );
+      this.set( lines[ i ] );
     }
   },
   read: function( indexes ) {
@@ -261,7 +264,23 @@ Notebook.prototype = {
   }
 };
 
-var NumberedNotebook = Notebook;
+// same as Notebook;
+NumberedNotebook = function() {
+  var _lines = [];
+
+  this.set = function( line ) {
+    _lines.push( line );
+  };
+
+  this.get = function() {
+    return _lines;
+  };
+};
+
+// 継承（新しめのブラウザのみ）
+NumberedNotebook.prototype = Object.create( Notebook.prototype );
+NumberedNotebook.prototype.constructor = NumberedNotebook;
+
 var rjust = function( number, length, padding ) {
   var padstr = '',
       i = length,
@@ -305,7 +324,7 @@ Notebook.prototype.write = function( content ) {
   for ( ; i < lines.length; i++ ) {
     // 空行を削除する。
     if ( lines[ i ].length > 0 ) {
-      this.add( lines[ i ] );
+      this.set( lines[ i ] );
     }
   }
 };
