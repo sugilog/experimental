@@ -51,7 +51,12 @@ Target
 - Tips
 
 
-[JS.Step3](/javascript_learnings/step3) <small>JavaScriptのオブジェクト。</small>
+[JS.Step3](/javascript_learnings/step3) <small>関数とスコープ</small>
+------------------------------------------------------------
+
+
+
+[JS.Step4](/javascript_learnings/step4) <small>JavaScriptのオブジェクト。</small>
 ----------------------------------------------------------
 - オブジェクトのイメージ
 - オブジェクトを定義する
@@ -59,21 +64,21 @@ Target
 - 取り扱い注意
 
 
-[JS.Step4](/javascript_learnings/step4) <small>イベントドリブン！</small>
+[JS.Step5](/javascript_learnings/step5) <small>イベントドリブン！</small>
 ----------------------------------------------------------
 
 
-[JS.Step5](/javascript_learnings/step5) <small>あらためてjQuery</small>
-----------------------------------------------------------
-
-
-
-[JS.Step6](/javascript_learnings/step6) <small>（実践）Railsのフォームと組み合わせてみる。</small>
+[JS.Step6](/javascript_learnings/step6) <small>あらためてjQuery</small>
 ----------------------------------------------------------
 
 
 
-[JS.Step7](/javascript_learnings/step7) <small>（実践）RailsとAjaxなアプリケーション。</small>
+[JS.Step7](/javascript_learnings/step7) <small>（実践）Railsのフォームと組み合わせてみる。</small>
+----------------------------------------------------------
+
+
+
+[JS.Step8](/javascript_learnings/step8) <small>（実践）RailsとAjaxなアプリケーション。</small>
 ----------------------------------------------------------
 
 
