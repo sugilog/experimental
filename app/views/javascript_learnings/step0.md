@@ -83,4 +83,3 @@ sugilogのリポジトリでもクリップボードにコピーする仕組み�
   - Google Analytics - ページが表示されたことや、ユーザーがページ内でどんな操作をしたのか、など、ページをユーザーがどのよに利用しているのかを知るために、JavaScriptが活用されています。
   - Google Tag Manager - 直接HTMLを編集して、Google Analyticsを含む様々なツールの「タグ」を挿入しないでも良いようにするために、Google Tag Managerでは、JavaScriptが活用されています。
 
-

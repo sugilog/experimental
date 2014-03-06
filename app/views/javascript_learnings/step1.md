@@ -3,8 +3,9 @@ JS.Step1 <small>JavaScriptでのプログラミングに触る。</small>
 
 ここではさわりとして[jQuery](http://jquery.com/)を利用してJavaScriptを体験してみます。
 （jQueryとは何か？はまた後で説明します。）
+HTMLの中にJavaScriptを入れてみて、どのような変化が起こるのかを見てください。
 
-また、ブラウザは[Chrome](https://www.google.com/chrome)を使用します。
+ブラウザは[Chrome](https://www.google.com/chrome)を使用します。
 
 
 JavaScriptに触れてみる
@@ -221,46 +222,4 @@ Consoleペインでは、あなたのJavaScriptがバグを含んでいた場合
 
 
 [サンプル](/javascript_learnings_resources/step1/myname_with_error.html#no_turbolink)
-
-
-Webリファレンスを見る
-----------------------------------------------------------
-自主学習用途に、ご紹介。
-
-- [MDN JavaScript](https://developer.mozilla.org/ja/docs/Web/JavaScript)
-  - ベーシックな検索はMozillaのサイトをおすすめします。
-  - 日本語訳されていない内容もあるかもしれないので、英語で慣れてしまうと良いです。
-- [MSDN](http://msdn.microsoft.com/library/d1et7k7c.aspx) ※IEのバージョンアップによってURLが変化する可能性があります。
-  - IE対応を考える場合は、合わせてMicrosoftのサイトをチェックすると良いです。
-- [jQuery API Documentation](http://api.jquery.com/)
-  - jQueryのAPIドキュメントです。
-  - 日本語サイトもありますが、基本はオフィシャルサイトを利用することですので英語版を。
-- [Codeacademy JavaScript](http://www.codecademy.com/tracks/javascript)
-  - CodeacademyのJavaScript。書きながら学べます。
-  - [jQuery](http://www.codecademy.com/tracks/jquery)もあります。
-
-
-Webサービスを利用してで学習する
-----------------------------------------------------------
-自主学習用途に、ご紹介。その2
-
-- [JSFIDDLE](http://jsfiddle.net/)
-  - HTML, CSS, JavaScriptを記述して、実行することができます。
-  - ライブラリも選択して読み込めるのでサンプルを作って見るときに役立ちます。
-- [Codeacademy](http://www.codecademy.com/ja/tracks/javascript)
-  - JavaScriptを含め、様々な言語の学習に利用できます。要ログイン。
-- [Try jQuery](http://try.jquery.com/)
-  - jQueryのラーニングセンターです。
-
-
-書籍で学ぶ
-----------------------------------------------------------
-自主学習用途に、ご紹介。その3
-
-- [初めてのJavaScript](http://www.amazon.co.jp/dp/487311425X/?_encoding=UTF8&camp=247&creative=1211&linkCode=ur2&tag=sugilog-js-22)
-- [JavaScript 第6版](http://www.amazon.co.jp/dp/4873115736/?_encoding=UTF8&camp=247&creative=1211&linkCode=ur2&tag=sugilog-js-22)
-- [パーフェクトJavaScript](http://www.amazon.co.jp/dp/477414813X/?_encoding=UTF8&camp=247&creative=1211&linkCode=ur2&tag=sugilog-js-22)
-- [JavaScript Ninjaの極意](http://www.amazon.co.jp/dp/4798128457/?_encoding=UTF8&camp=247&creative=1211&linkCode=ur2&tag=sugilog-js-22)
-- [コアjQuery＋プラグイン/jQuery UI 開発実践技法](http://www.amazon.co.jp/dp/4798124281/?_encoding=UTF8&camp=247&creative=1211&linkCode=ur2&tag=sugilog-js-22)
-
 
