@@ -50,16 +50,19 @@ Function
 JavaScriptでも変数を扱うことが可能です。
 
 変数の宣言
+
 ```js
 var name;
 ```
 
 変数の初期化
+
 ```js
 var name = "sugilog";
 ```
 
 変数の宣言をした後の代入
+
 ```js
 var name;
 name = "sugilog";
