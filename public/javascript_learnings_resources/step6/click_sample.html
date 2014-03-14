@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Sample
+    </title>
+  </head>
+  <body>
+    <h1>
+      Sample HTML
+    </h1>
+
+    <img src="http://lorempixel.com/100/100/" />
+    <span>
+      Click image!
+    </span>
+
+    <script type="text/javascript">
+      var img = document.getElementsByTagName( "img" )[ 0 ]
+      img.addEventListener(
+        "click",
+        function( event ) {
+          alert( event.target.src );
+        },
+        false
+      );
+    </script>
+  </body>
+</html>
