@@ -69,22 +69,42 @@ Target
 - 取り扱い注意
 
 
-[JS.Step5](/javascript_learnings/step5) <small>イベントドリブン！</small>
+[JS.Step5](/javascript_learnings/step5) <small>DOM</small>
 ----------------------------------------------------------
+- DOMとは
+- DOMを取得する
+- DOMを追加する
+- innerHTMLとappendChild
 
 
-[JS.Step6](/javascript_learnings/step6) <small>あらためてjQuery</small>
+[JS.Step6](/javascript_learnings/step6) <small>イベントドリブン！</small>
 ----------------------------------------------------------
+- イベントとは
+- windowの読み込みに連動する
+- クリックに連動する
+- ちょっと後に実行する
+- 実行の優先順位を下げる
 
 
-
-[JS.Step7](/javascript_learnings/step7) <small>（実践）Railsのフォームと組み合わせてみる。</small>
+[JS.Step7](/javascript_learnings/step7) <small>あらためてjQuery</small>
 ----------------------------------------------------------
+- jQueryとは
+- jQueryのメソッド
+- jQueryでDOM要素を扱う
+- jQueryでイベント
 
 
-
-[JS.Step8](/javascript_learnings/step8) <small>（実践）RailsとAjaxなアプリケーション。</small>
+[JS.Step8](/javascript_learnings/step8) <small>（実践）Railsのフォームと組み合わせてみる。</small>
 ----------------------------------------------------------
+- railsのフォーム
+- selectに連動する
+- checkboxに連動する
+- submitに連動する
+
+
+[JS.Step9](/javascript_learnings/step9) <small>（実践）RailsとAjaxなアプリケーション。</small>
+----------------------------------------------------------
+- Railsが提供するAjaxなヘルパー
 
 
 * * * *
