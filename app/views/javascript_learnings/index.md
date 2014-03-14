@@ -53,7 +53,12 @@ Target
 
 [JS.Step3](/javascript_learnings/step3) <small>関数とスコープ</small>
 ------------------------------------------------------------
-
+- 関数
+- 関数の定義
+- スコープ
+- クロージャ
+- call と apply
+- 関数定義時の引数
 
 
 [JS.Step4](/javascript_learnings/step4) <small>JavaScriptのオブジェクト。</small>
