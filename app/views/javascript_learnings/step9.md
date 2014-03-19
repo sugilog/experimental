@@ -12,7 +12,7 @@ selectに連動する
 
 ```ruby
 <%= form_for @post do |f| %>
-  <%= f.select :person_id, Person.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>
+  <%= f.select :person_id, Person.all.collect {|p| [ p.name, p.id ] }, { include_blank: true } %>
   <%= f.submit %>
 <% end %>
 ```
