@@ -1,4 +1,4 @@
-JS.Step9 <small>（実践）RailsとAjaxなアプリケーション。</small>
+JS.Step8 <small>（実践）RailsとAjaxなアプリケーション。</small>
 ==========================================================
 
 Railsが提供するAjaxなヘルパー View編

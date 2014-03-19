@@ -95,17 +95,16 @@ Target
 - jQueryでイベント
 
 
-[JS.Step8](/javascript_learnings/step8) <small>（実践）Railsのフォームと組み合わせてみる。</small>
+[JS.Step8](/javascript_learnings/step8) <small>（実践）RailsとAjaxなアプリケーション。</small>
 ----------------------------------------------------------
-- railsのフォーム
+- Railsが提供するAjaxなヘルパー
+
+
+[JS.Step9](/javascript_learnings/step9) <small>（実践）Railsのフォームと組み合わせてみる。</small>
+----------------------------------------------------------
 - selectに連動する
 - checkboxに連動する
 - submitに連動する
-
-
-[JS.Step9](/javascript_learnings/step9) <small>（実践）RailsとAjaxなアプリケーション。</small>
-----------------------------------------------------------
-- Railsが提供するAjaxなヘルパー
 
 
 * * * *
