@@ -11,10 +11,10 @@ selectに連動する
 [API Dock]( http://apidock.com/rails/ActionView/Helpers/FormBuilder/select )
 
 ```ruby
-<%= form_for @post do |f| %>
-  <%= f.select :person_id, Person.all.collect {|p| [ p.name, p.id ] }, { include_blank: true } %>
-  <%= f.submit %>
-<% end %>
+form_for @post do |f|
+  f.select :person_id, Person.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }
+  f.submit
+end
 ```
 
 とすると、例えば、以下のようなHTMLが生成されます。
@@ -48,9 +48,9 @@ checkboxに連動する
 [API Dock]( http://apidock.com/rails/ActionView/Helpers/FormBuilder/check_box )
 
 ```ruby
-<%= fields_for "project[invoice_attributes][]", invoice, index: nil do |form| %>
-  <%= form.check_box :paid %>
-<% end %>
+fields_for "project[invoice_attributes][]", invoice, index: nil do |form|
+  form.check_box :paid
+end
 ```
 
 とすると、例えば、以下のようなHTMLが生成されます。
