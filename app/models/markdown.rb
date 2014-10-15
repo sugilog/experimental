@@ -5,12 +5,30 @@ class Markdown
 
   DEFAULT_PARSER = 'GFM'
 
+  CUSTOM_TAG = /\[\[Image\((\d+)_(\d+)\)\]\]/
+
   def initialize(options = {})
     @parser = options[:input] || DEFAULT_PARSER
   end
 
   def render(text)
+    text = convert_custom_tag text
     Kramdown::Document.new(text, input: @parser).to_html
+  end
+
+  def convert_custom_tag(text)
+    text.gsub CUSTOM_TAG, <<-PATTERN
+```
+<span class="thumbnail_image">
+  <div class="image_mask" data-id="\\1" style="display: none;">
+    <a onclick="alert("hoge"); return false;" href="#">
+      \\2
+    </a>
+  </div>
+  <img src="/images/image_\\1_\\2" />
+</span>
+```
+    PATTERN
   end
 end
 
