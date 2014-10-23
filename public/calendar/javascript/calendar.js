@@ -10,7 +10,11 @@
       jQuery("#calendar_field_header").css({width: jQuery("#calendar_field_parent").get(0).scrollWidth});
     },
     setResizable: function() {
-      jQuery(document).ready(this.resizeHeaderWidth);
+      jQuery(document).ready(function() {
+        setTimeout( function() {
+          this.resizeHeaderWidth
+        }, 300);
+      });
       jQuery(window).on("resize", this.resizeHeaderWidth);
     },
   };
