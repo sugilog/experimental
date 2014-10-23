@@ -189,7 +189,7 @@
       };
     });
 
-    jQuery(".calendar_event").live("mousedown.onEvent", function(_event) {
+    jQuery(document).on("mousedown.onEvent", ".calendar_event", function(_event) {
       _event.preventDefault();
       eventUtil.drag.start(_event.target);
       var target = jQuery(_event.target).data("target");
